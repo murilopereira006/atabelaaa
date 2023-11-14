@@ -1,10 +1,18 @@
-import { getBrasileiraoATable } from '../helpers/api'
+import { getAllCamps, getTableCamp } from '../helpers/api'
+import camp from '../helpers/idCampList'
 
-const response = await getBrasileiraoATable()
-console.log(response)
+import Tabela from '../components/tabela'
+
+// const response = await getAllCamps()
+// // console.log(response)
+
+const tabela = await getTableCamp(camp.brasileirao)
+// console.log(response2)
 
 const Home = () => {
-    return <h1>{response.data[0].nome_popular}</h1>;
+    return <>
+        <Tabela data={tabela.data} />
+    </>;
 };
 
 export default Home;
