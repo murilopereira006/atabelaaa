@@ -3,8 +3,8 @@ import axios from 'axios';
 const instance = axios.create({
     baseURL: 'https://api.api-futebol.com.br/v1/',
     timeout: 5000,
-    headers: { 'Authorization': import.meta.env.VITE_TEST_API_TOKEN }
-    // headers: { 'Authorization': import.meta.env.VITE_LIVE_API_TOKEN }
+    // headers: { 'Authorization': import.meta.env.VITE_TEST_API_TOKEN }
+    headers: { 'Authorization': import.meta.env.VITE_LIVE_API_TOKEN }
 });
 
 export async function getAllCamps() {

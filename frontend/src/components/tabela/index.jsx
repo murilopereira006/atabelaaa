@@ -25,7 +25,7 @@ export default function Tabela({ data }) {
                         return (<tr key={item.time.nome_popular}>
                             <td>{item.posicao}</td>
                             <td>
-                                <img style={{ height: '20px' }} src={item.time.escudo} />
+                                <img style={{ height: '20px' }} src={item.time.escudo} alt={`escudo ${item.time.nome_popular}`} />
                                 {item.time.nome_popular}
                             </td>
                             <td>{item.pontos}</td>
