@@ -1,5 +1,5 @@
 import axios from 'axios'
-import camp from '../helpers/idCampList'
+import camp from './idCampList'
 
 const instance = axios.create({
     baseURL: 'https://api.api-futebol.com.br/v1/',

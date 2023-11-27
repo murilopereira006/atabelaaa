@@ -1,4 +1,6 @@
-# atabelaaa
+# COMING SOON ...
+
+## atabelaaa
 Sistema de Previsão de Desempenho em Competições de Futebol
 
 O objetivo principal do projeto é oferecer aos entusiastas do futebol uma ferramenta abrangente e precisa para entender as probabilidades associadas ao desempenho de seus times do coração. Utilizando raspagem de dados, consumo de APIs públicas e, em fases subsequentes, incorporando técnicas de aprendizado de máquina através do TensorFlow, o sistema proporciona uma visão detalhada das chances de um time ser campeão, ser rebaixado ou classificar-se para competições sul-americanas.
