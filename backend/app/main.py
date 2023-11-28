@@ -1,5 +1,10 @@
 from flask import Flask
-from scrape import gettingTableValues
+import os
+from dotenv import load_dotenv
+from helpers.scrape import gettingTableValues
+from helpers.api import getTableCamp
+
+load_dotenv()
 
 app = Flask(__name__)
 
@@ -20,6 +25,9 @@ def sula():
 @app.route('/rebaixamento')
 def rebaixamento():
     return gettingTableValues(url_rebaixamento_A)
+@app.route('/tabela')
+def tabela():
+    return getTableCamp(10)
 
 if __name__ == '__main__':
-    app.run()
+    app.run(port=os.getenv('PORT'))
