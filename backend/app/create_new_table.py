@@ -16,12 +16,12 @@ def setListProb(lista):
         teamsList.append(teamInfos)
     return teamsList
 
-# def addProbValue(tabela, probList, probName: str):
-#     for team in tabela:
-#         print(team["time"]["nome_popular"])
-        # for teamProb in probList:
-            # if team["time"]["nome_popular"] == teamProb["nome"]:
-            #     team[probName] = teamProb["prob"]
+def addProbValue(tabela, probList, probName: str):
+    for team in tabela:
+        print(team["time"]["nome_popular"])
+        for teamProb in probList:
+            if team["time"]["nome_popular"] == teamProb["nome"]:
+                team[probName] = teamProb["prob"]
 
 
 def newTableGenerator():
