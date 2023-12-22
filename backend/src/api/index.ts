@@ -10,8 +10,7 @@ const instance = axios.create({
   headers: {'Authorization': token}
 })
 
-const response = await instance.get(`campeonatos`)
+const response = await instance.get(`campeonatos/10/tabela`)
 const data = response.data
-console.log(response.data)
 
 export default data

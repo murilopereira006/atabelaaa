@@ -7,10 +7,10 @@ const agruppingValuesInArray = (array:Array<string>, numberOfElementsToAgroupe:n
 
     for (let i = 0; i < array.length; i += numberOfElementsToAgroupe) {
         const key = array[i + 1];
-        const value = array[i + 2];
+        const valor = array[i + 2];
     
         const objeto: { [key: string]: string } = {};
-        objeto[key] = value;
+        objeto[key] = valor;
     
         newArray.push(objeto);
       }
