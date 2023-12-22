@@ -1,6 +1,7 @@
 import axios from 'axios';
 import * as cheerio from 'cheerio';
 import * as dotenv from 'dotenv';
+import agruppingValuesInArray from "./agrupingValuesInArray"
 
 dotenv.config();
 
@@ -20,7 +21,9 @@ export default async function fetchData() {
       }
     });
 
-    return cellContent;
+    const aaaaaaaaaaa: Array<object> | Error = agruppingValuesInArray(cellContent, 3)
+
+    return aaaaaaaaaaa;
   } catch (error) {
     console.error('Erro na solicitação:', error);
     return [];

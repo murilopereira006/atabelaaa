@@ -1,6 +1,7 @@
 import { Elysia } from "elysia";
 import * as dotenv from 'dotenv';
 import fetchData from './helpers/scraping'
+import data from './api'
 
 const PORT =  process.env.PORT || ''
 
@@ -11,3 +12,4 @@ console.log(
 );
 const promise = await fetchData()
 console.log(promise);
+// console.log(data);

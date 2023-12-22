@@ -11,4 +11,7 @@ const instance = axios.create({
 })
 
 const response = await instance.get(`campeonatos`)
+const data = response.data
 console.log(response.data)
+
+export default data
