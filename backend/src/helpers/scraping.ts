@@ -21,9 +21,9 @@ export default async function fetchData() {
       }
     });
 
-    const aaaaaaaaaaa: Array<object> | Error = agruppingValuesInArray(cellContent, 3)
+    const probabilytesArray: Array<object> | Error = agruppingValuesInArray(cellContent, 3)
 
-    return aaaaaaaaaaa;
+    return probabilytesArray;
   } catch (error) {
     console.error('Erro na solicitação:', error);
     return [];

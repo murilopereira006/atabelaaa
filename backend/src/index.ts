@@ -8,13 +8,11 @@ import data from './api'
 
 const PORT =  process.env.PORT || ''
 
-const app = new Elysia().get("/", () => "Hello Elysia").listen(PORT)
+const probabilites = await fetchData()
+const responseGetSimple = mixingTable(data, probabilites)
+
+const app = new Elysia().get("/", () => responseGetSimple).listen(PORT)
 
 console.log(
   `🦊 Elysia is running at ${app.server?.hostname}:${app.server?.port}`
 );
-// console.log(data)
-const aaaaaa = await fetchData()
-// console.log(aaaaaa)
-
-console.log(mixingTable(data, aaaaaa))

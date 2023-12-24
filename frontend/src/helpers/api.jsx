@@ -2,9 +2,9 @@ import axios from 'axios'
 import camp from './idCampList'
 
 const instance = axios.create({
-    baseURL: 'https://api.api-futebol.com.br/v1/',
+    baseURL: 'http://localhost:8000/',
     timeout: 5000,
-    headers: { 'Authorization': import.meta.env.VITE_TEST_API_TOKEN }
+    // headers: { 'Authorization': import.meta.env.VITE_TEST_API_TOKEN }
     // headers: { 'Authorization': import.meta.env.VITE_LIVE_API_TOKEN }
 });
 
@@ -15,7 +15,7 @@ export async function getAllCamps() {
 
     // if() {
     try {
-        const response = await instance.get(`campeonatos`)
+        const response = await instance.get(``)
         localStorage.setItem('campeonatos', response)
         return response
     } catch (error) {
