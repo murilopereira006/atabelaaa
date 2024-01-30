@@ -1,12 +1,14 @@
-import { getAllCamps, getTableCamp } from '../helpers/api'
-import camp from '../helpers/idCampList'
+// import { getAllCamps, getTableCamp } from '../helpers/api'
+// import camp from '../helpers/idCampList'
 import Tabela from '../components/tabela'
 
-const tabela = await getTableCamp('brasileirao', camp.brasileirao)
+import mock from '../helpers/dataMock'
+
+// const tabela = await getTableCamp('brasileirao', camp.brasileirao)
 
 const Home = () => {
     return <>
-        <Tabela data={tabela.data} />
+        <Tabela data={mock.data} />
     </>;
 };
 
