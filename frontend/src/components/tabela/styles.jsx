@@ -1,11 +1,21 @@
 import styled from 'styled-components';
 
 export const Table = styled.table`
-    // height: 80vh;
+    border-spacing: 10px;
+
+    tr: {
+    }
+
+    tr:nth-child(even) {
+        background-color: #D6EEEE;
+    }
+
+    tr:hover { background-color: red; }
 `;
 
 export const TableHeader = styled.thead`
-    // height: 80vh;
+    background-color: #F2F2F2;
+    tr:hover { background-color: transparent; }
 `;
 
 export const TableBody = styled.tbody`
@@ -13,11 +23,12 @@ export const TableBody = styled.tbody`
 `;
 
 export const CellHeader = styled.th`
-    // height: 80vh;
+    
 `;
 
 export const CellBody = styled.td`
-    // height: 80vh;
+    padding: 5px 10px;
+    text-align: center;
 `;
 
 // export const HeadrBox = styled.div`
