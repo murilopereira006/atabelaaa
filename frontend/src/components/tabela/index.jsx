@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types'
-import { Tooltip } from 'react-tooltip'
-import { Table, TableHeader, TableBody, CellHeader, CellBody } from './styles'
+import { Table, TableHeader, TableBody, CellHeader, CellBody, TooltipStyled } from './styles'
 
 export default function Tabela({ tableHeaders, data }) {
     return (
@@ -9,10 +8,10 @@ export default function Tabela({ tableHeaders, data }) {
                 <tr>
                     {tableHeaders.map((item, index) => {
                         return (
-                            <CellHeader id={"not-clickable" + item.id} key={index} colSpan={item.colspan}>
-                                <Tooltip anchorSelect={"#not-clickable" + item.id} key={`Tooltip ${index}`} place="top">
+                            <CellHeader id={"cellId" + item.id} key={index} colSpan={item.colspan}>
+                                <TooltipStyled anchorSelect={"#cellId" + item.id} key={`TooltipStyled ${index}`} place="top">
                                     {item.longWord}
-                                </Tooltip>
+                                </TooltipStyled>
                                 {item.acronym}
                             </CellHeader>
                         )

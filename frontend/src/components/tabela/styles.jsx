@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Tooltip } from 'react-tooltip'
 
 export const Table = styled.table`
     border-spacing: 0px;
@@ -29,4 +30,8 @@ export const CellHeader = styled.th`
 export const CellBody = styled.td`
     padding: 5px 10px;
     text-align: center;
+`;
+
+export const TooltipStyled = styled(Tooltip)`
+    position: absolute;
 `;
