@@ -1,48 +1,49 @@
 import PropTypes from 'prop-types'
+import { Table, TableHeader, TableBody, CellHeader, CellBody } from './styles'
 
 export default function Tabela({ data }) {
     return (
-        <table>
-            <thead>
+        <Table>
+            <TableHeader>
                 <tr>
-                    <th>POS</th>
-                    <th>Time</th>
-                    <th>PTS</th>
-                    <th>J</th>
-                    <th>V</th>
-                    <th>E</th>
-                    <th>D</th>
-                    <th>GP</th>
-                    <th>GC</th>
-                    <th>SG</th>
-                    <th>aproveitamento</th>
-                    <th>🏆 ou 🕳️</th>
+                    <CellHeader>POS</CellHeader>
+                    <CellHeader>Time</CellHeader>
+                    <CellHeader>PTS</CellHeader>
+                    <CellHeader>J</CellHeader>
+                    <CellHeader>V</CellHeader>
+                    <CellHeader>E</CellHeader>
+                    <CellHeader>D</CellHeader>
+                    <CellHeader>GP</CellHeader>
+                    <CellHeader>GC</CellHeader>
+                    <CellHeader>SG</CellHeader>
+                    <CellHeader>aproveitamento</CellHeader>
+                    <CellHeader>🏆 ou 🕳️</CellHeader>
                 </tr>
-            </thead>
-            <tbody>
+            </TableHeader>
+            <TableBody>
                 {
                     data.map((item) => {
                         return (<tr key={item.time.nome_popular}>
-                            <td>{item.posicao}</td>
-                            <td>
+                            <CellBody>{item.posicao}</CellBody>
+                            <CellBody>
                                 <img style={{ height: '20px' }} src={item.time.escudo} alt={`escudo ${item.time.nome_popular}`} />
                                 {item.time.nome_popular}
-                            </td>
-                            <td>{item.pontos}</td>
-                            <td>{item.jogos}</td>
-                            <td>{item.vitorias}</td>
-                            <td>{item.empates}</td>
-                            <td>{item.derrotas}</td>
-                            <td>{item.gols_pro}</td>
-                            <td>{item.gols_contra}</td>
-                            <td>{item.saldo_gols}</td>
-                            <td>{item.aproveitamento}</td>
-                            <td>20%</td>
+                            </CellBody>
+                            <CellBody>{item.pontos}</CellBody>
+                            <CellBody>{item.jogos}</CellBody>
+                            <CellBody>{item.vitorias}</CellBody>
+                            <CellBody>{item.empates}</CellBody>
+                            <CellBody>{item.derrotas}</CellBody>
+                            <CellBody>{item.gols_pro}</CellBody>
+                            <CellBody>{item.gols_contra}</CellBody>
+                            <CellBody>{item.saldo_gols}</CellBody>
+                            <CellBody>{item.aproveitamento}</CellBody>
+                            <CellBody>20%</CellBody>
                         </tr>)
                     })
                 }
-            </tbody>
-        </table>
+            </TableBody>
+        </Table>
     )
 }
 
