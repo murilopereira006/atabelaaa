@@ -11,8 +11,8 @@ export const Table = styled.table`
 `;
 
 export const TableLine = styled.tr`
-    border-left: 2px solid ${props => props.colorLine};
-    border-bottom: 1px solid ${props => props.colorLine};
+    border-left: 2px solid ${props => props.colorline};
+    border-bottom: 1px solid ${props => props.colorline};
 `;
 
 export const TableHeader = styled.thead`

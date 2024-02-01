@@ -19,7 +19,7 @@ export default function Tabela({ tableHeaders, data }) {
     return (
         <Table>
             <TableHeader>
-                <TableLine colorLine={"black"}>
+                <TableLine colorline={"black"}>
                     {tableHeaders.map((item, index) => {
                         return (
                             <CellHeader id={"cellId" + item.id} key={index} colSpan={item.colspan}>
@@ -36,7 +36,7 @@ export default function Tabela({ tableHeaders, data }) {
                 {
                     data.map((item) => {
                         return (
-                            <TableLine key={item.time.nome_popular} colorLine={classificationColor(item.posicao)}>
+                            <TableLine key={item.time.nome_popular} colorline={classificationColor(item.posicao)}>
                                 <CellBody>{item.posicao}</CellBody>
                                 <CellBody>
                                     <img style={{ height: '20px' }} src={item.time.escudo} alt={`escudo ${item.time.nome_popular}`} />
