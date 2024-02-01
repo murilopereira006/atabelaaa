@@ -3,20 +3,24 @@ import { Tooltip } from 'react-tooltip'
 
 export const Table = styled.table`
     border-spacing: 0px;
-
-    tr: {
-    }
-
+    border-collapse: collapse;
+    
     tr:nth-child(even) {
-        background-color: #D6EEEE;
+        background-color: var(--tertiary-color);
     }
+`;
 
-    tr:hover { background-color: red; }
+export const TableLine = styled.tr`
+    border-left: 2px solid ${props => props.colorLine};
+    border-bottom: 1px solid ${props => props.colorLine};
 `;
 
 export const TableHeader = styled.thead`
-    background-color: #F2F2F2;
-    tr:hover { background-color: transparent; }
+    tr {
+        background-color: var(--complementary-color);
+        border-left: 2px solid var(--complementary-color);
+        border-bottom: 2px solid var(--complementary-color);
+    }
 `;
 
 export const TableBody = styled.tbody`
@@ -24,7 +28,7 @@ export const TableBody = styled.tbody`
 `;
 
 export const CellHeader = styled.th`
-    
+    padding: 5px 10px;
 `;
 
 export const CellBody = styled.td`

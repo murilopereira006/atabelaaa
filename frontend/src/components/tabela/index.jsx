@@ -1,11 +1,25 @@
 import PropTypes from 'prop-types'
-import { Table, TableHeader, TableBody, CellHeader, CellBody, TooltipStyled } from './styles'
+import { Table, TableHeader, TableBody, TableLine, CellHeader, CellBody, TooltipStyled } from './styles'
+
+const classificationColor = (posicao) => {
+    if (posicao <= 4) {
+        return "green"
+    } else if (posicao <= 6) {
+        return "purple"
+    } else if (posicao <= 12) {
+        return "blue"
+    } else if (posicao >= 17) {
+        return "red"
+    } else {
+        return "gray"
+    }
+}
 
 export default function Tabela({ tableHeaders, data }) {
     return (
         <Table>
             <TableHeader>
-                <tr>
+                <TableLine colorLine={"black"}>
                     {tableHeaders.map((item, index) => {
                         return (
                             <CellHeader id={"cellId" + item.id} key={index} colSpan={item.colspan}>
@@ -16,13 +30,13 @@ export default function Tabela({ tableHeaders, data }) {
                             </CellHeader>
                         )
                     })}
-                </tr>
+                </TableLine>
             </TableHeader>
             <TableBody>
                 {
                     data.map((item) => {
                         return (
-                            <tr key={item.time.nome_popular}>
+                            <TableLine key={item.time.nome_popular} colorLine={classificationColor(item.posicao)}>
                                 <CellBody>{item.posicao}</CellBody>
                                 <CellBody>
                                     <img style={{ height: '20px' }} src={item.time.escudo} alt={`escudo ${item.time.nome_popular}`} />
@@ -38,7 +52,7 @@ export default function Tabela({ tableHeaders, data }) {
                                 <CellBody>{item.saldo_gols}</CellBody>
                                 <CellBody>{item.aproveitamento}</CellBody>
                                 <CellBody>20%</CellBody>
-                            </tr>
+                            </TableLine>
                         )
                     })
                 }
