@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import { Table, TableHeader, TableBody, TableLine, CellHeader, CellBody, TooltipStyled } from './styles'
+import { Table, TableHeader, TableBody, TableLineHeader, TableLine, CellHeader, CellBody, TooltipStyled, ImgTeam } from './styles'
 
 const classificationColor = (posicao) => {
     if (posicao <= 4) {
@@ -19,7 +19,7 @@ export default function Tabela({ tableHeaders, data }) {
     return (
         <Table>
             <TableHeader>
-                <TableLine colorline={"black"}>
+                <TableLineHeader>
                     {tableHeaders.map((item, index) => {
                         return (
                             <CellHeader id={"cellId" + item.id} key={index} colSpan={item.colspan}>
@@ -30,7 +30,7 @@ export default function Tabela({ tableHeaders, data }) {
                             </CellHeader>
                         )
                     })}
-                </TableLine>
+                </TableLineHeader>
             </TableHeader>
             <TableBody>
                 {
@@ -39,7 +39,7 @@ export default function Tabela({ tableHeaders, data }) {
                             <TableLine key={item.time.nome_popular} colorline={classificationColor(item.posicao)}>
                                 <CellBody>{item.posicao}</CellBody>
                                 <CellBody>
-                                    <img style={{ height: '20px' }} src={item.time.escudo} alt={`escudo ${item.time.nome_popular}`} />
+                                    <ImgTeam src={item.time.escudo} alt={`escudo ${item.time.nome_popular}`} />
                                 </CellBody>
                                 <CellBody>{item.time.nome_popular}</CellBody>
                                 <CellBody>{item.pontos}</CellBody>

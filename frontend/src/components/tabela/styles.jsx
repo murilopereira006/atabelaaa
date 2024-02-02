@@ -10,9 +10,22 @@ export const Table = styled.table`
     }
 `;
 
+export const TableLineHeader = styled.tr`
+    box-sizing: border-box;
+`;
+
 export const TableLine = styled.tr`
     border-left: 2px solid ${props => props.colorline};
     border-bottom: 1px solid ${props => props.colorline};
+    box-sizing: border-box;
+
+    :hover {
+        padding: 15px 0;    
+    }
+
+    td:nth-child(n+2) {
+        color: ${props => props.colorline};
+    }
 `;
 
 export const TableHeader = styled.thead`
@@ -39,3 +52,11 @@ export const CellBody = styled.td`
 export const TooltipStyled = styled(Tooltip)`
     position: absolute;
 `;
+
+export const ImgTeam = styled.img`
+    max-height: 20px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+`;
+
