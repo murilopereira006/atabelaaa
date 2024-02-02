@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 import { Tooltip } from 'react-tooltip'
 
 export const Table = styled.table`

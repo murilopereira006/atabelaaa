@@ -1,5 +1,6 @@
 // import { getAllCamps, getTableCamp } from '../helpers/api'
 // import camp from '../helpers/idCampList'
+import Topbar from '../components/topBar'
 import Tabela from '../components/tabela'
 
 import mock from '../helpers/dataMock'
@@ -10,6 +11,7 @@ const tableHeaders = [{ id: 0, acronym: 'POS', longWord: 'Posicao', colspan: '1'
 
 const Home = () => {
     return <>
+        <Topbar />
         <Tabela data={mock.data} tableHeaders={tableHeaders} />
     </>;
 };
